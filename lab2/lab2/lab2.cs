@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Accord.Collections;
 using Accord.Math;
 
 namespace lab2
@@ -12,6 +13,7 @@ namespace lab2
         private static double[,] matrix_B;
         private static double[,] inverse_matrix_B;
         private static double[,] matrix_N;
+        private static double[,] zero_point;
 
         public static void Main(string[] args)
         {
@@ -30,10 +32,10 @@ namespace lab2
             var matrix = MoiuLib.FillMatrix(rows, dims);
 
             Console.WriteLine("Enter zero point:");
-            var x = MoiuLib.FillMatrix(1, dims);
+            zero_point = MoiuLib.FillMatrix(1, dims);
 
-            basis_indexes = x.GetRow(0).Select(((d, i) => new {d, i})).OrderByDescending((arg => arg.d)).Take(rows).Select((arg => arg.i)).ToList();
-            non_basis_indexes = x.GetRow(0).Select(((d, i) => i)).ToList().Except(basis_indexes).ToList();
+            basis_indexes = zero_point.GetRow(0).Select(((d, i) => new {d, i})).OrderByDescending((arg => arg.d)).Take(rows).Select((arg => arg.i)).ToList();
+            non_basis_indexes = zero_point.GetRow(0).Select(((d, i) => i)).ToList().Except(basis_indexes).ToList();
             
             matrix_B = GetSubMatrixByCols(matrix, basis_indexes.ToArray());
             matrix_N = GetSubMatrixByCols(matrix, non_basis_indexes.ToArray());
@@ -59,7 +61,42 @@ namespace lab2
             while (c_indexes_more_zero.Count > 0)
             {
                 var c_index = c_indexes_more_zero[0];
+                var c_column = matrix.GetColumn(c_index);
+                var increment = inverse_matrix_B.Dot(c_column);
+                var tettas = new Dictionary<int, double>();
+                for (int i = 0; i < increment.Length; i++)
+                {
+                    if(increment[i] > 0)
+                        tettas[i] = zero_point[0, basis_indexes[i]] / increment[i];
+                }
+                var tetta_max = increment.Min();
+                
+                zero_point = UpdateZeroPoint(increment, tetta_max, c_index);
+
             }  
+
+        }
+
+        private static double[,] UpdateZeroPoint(double[] increment, double tettaMax, int index)
+        {
+            var result = new double[basis_indexes.Count];
+            for (int i = 0; i < basis_indexes.Count; i++)
+            {
+                result[i] = zero_point[0,basis_indexes[i]];
+            }
+            result.Subtract(MoiuLib.MultiplyMatrixAndScalar(increment, tettaMax));
+            var min_ind = result.IndexOf(result.Min());
+            for (int i = 0; i < basis_indexes.Count; i++)
+            {
+                zero_point[0, basis_indexes[i]] = result[i];
+            }
+            zero_point[0, index] = tettaMax;  
+
+
+            non_basis_indexes[non_basis_indexes.IndexOf(index)] = basis_indexes[min_ind];
+            basis_indexes[min_ind] = index;
+            
+            return result.Make2DArray();
 
         }
 

@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Accord.Math;
 
 namespace lab2
 {
@@ -140,6 +141,14 @@ namespace lab2
             return resultMatrix;
         }
 
+        public static double[] MultiplyMatrixAndScalar(double[] A, double c)
+        {
+            var resultMatrix = A.Copy();
+            for (int i = 0; i < A.Length; i++)
+                resultMatrix[i] *= c;
+            return resultMatrix;
+        }       
+             
         #endregion
         
         
