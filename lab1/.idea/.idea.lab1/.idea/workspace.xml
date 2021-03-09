@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9dbc8945-4e50-44b7-842b-c6d5bd631d88" name="Default Changelist" comment="" />
+    <list default="true" id="9dbc8945-4e50-44b7-842b-c6d5bd631d88" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lab1/Lab1Alg.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab1/lab1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab1/lab2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab1/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/bin/Debug/lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/bin/Debug/lab1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/bin/Debug/lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/bin/Debug/lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/lab1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/lab1.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/obj/Debug/lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/obj/Debug/lab1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/obj/Debug/lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/obj/Debug/lab1.pdb" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,62 +21,136 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lab1/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-              <folding>
-                <marker date="1613686367170" expanded="true" signature="6:66" ph="..." />
-                <marker date="1613686367170" expanded="true" signature="82:3992" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="111:3990" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="164:800" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="545:618" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="859:1119" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="927:1109" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="1269:1949" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="1554:1614" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="1967:3984" ph="HelpMethods" />
-                <marker date="1613686367170" expanded="true" signature="2048:2430" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="2147:2393" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="2297:2379" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="2492:2731" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="2797:3125" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="3208:3964" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="3472:3562" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="3603:3927" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="3662:3913" ph="{...}" />
-                <marker date="1613686367170" expanded="true" signature="3759:3854" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lab1/lab1.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+                  <folding>
+                    <marker date="1615026589647" expanded="false" signature="6:66" ph="..." />
+                    <marker date="1615026589647" expanded="true" signature="82:826" ph="{...}" />
+                    <marker date="1615026589647" expanded="true" signature="108:824" ph="{...}" />
+                    <marker date="1615026589647" expanded="true" signature="161:816" ph="{...}" />
+                    <marker date="1615026589647" expanded="true" signature="574:647" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/lab1/Lab1Alg.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1590">
+                  <caret line="106" selection-start-line="106" selection-end-line="106" />
+                  <folding>
+                    <marker date="1615026122172" expanded="true" signature="6:56" ph="..." />
+                    <marker date="1615026122172" expanded="true" signature="72:3331" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="99:3329" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="258:885" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="519:582" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="905:3316" ph="HelpMethods" />
+                    <marker date="1615026122172" expanded="true" signature="987:1381" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="1089:1342" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="1242:1327" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="1444:1690" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="1757:2095" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="2179:2960" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="2451:2544" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="2586:2921" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="2647:2906" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="2747:2845" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="3018:3286" ph="{...}" />
+                    <marker date="1615026122172" expanded="true" signature="3088:3275" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/lab1/lab1.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="390">
+                  <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+                  <folding>
+                    <marker date="1615026589647" expanded="false" signature="6:66" ph="..." />
+                    <marker date="1615026589647" expanded="true" signature="82:826" ph="{...}" />
+                    <marker date="1615026589647" expanded="true" signature="108:824" ph="{...}" />
+                    <marker date="1615026589647" expanded="true" signature="161:816" ph="{...}" />
+                    <marker date="1615026589647" expanded="true" signature="574:647" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lab1/lab2.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+                  <folding>
+                    <marker date="1615025691489" expanded="true" signature="14:61" ph="{...}" />
+                    <marker date="1615025691489" expanded="true" signature="38:59" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/lab1/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lab1/lab1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lab1/lab2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lab1/Lab1Alg.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lab1/Program.cs" />
+        <option value="$PROJECT_DIR$/lab1/lab2.cs" />
+        <option value="$PROJECT_DIR$/lab1/lab1.cs" />
+        <option value="$PROJECT_DIR$/lab1/Lab1Alg.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="21" />
-    <option name="width" value="1938" />
-    <option name="height" value="1068" />
+    <option name="x" value="-10" />
+    <option name="y" value="20" />
+    <option name="width" value="1940" />
+    <option name="height" value="1070" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="lab1" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="lab1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="lab1" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
         <option name="show-all-files" value="false" />
       </pane>
       <pane id="AssemblyExplorer" />
@@ -120,12 +206,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613673104129</updated>
-      <workItem from="1613673121488" duration="6924000" />
+      <workItem from="1613673121488" duration="7171000" />
+      <workItem from="1613898837601" duration="1844000" />
+      <workItem from="1615023202379" duration="10000" />
+      <workItem from="1615024858872" duration="1790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6924000" />
+    <option name="totallyTimeSpent" value="10815000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -137,39 +226,42 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
+    <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1981886" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20590208" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Performance Profiler" />
-      <window_info anchor="bottom" id="Build" weight="0.32946146" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2825397" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.32946146" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -182,31 +274,54 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lab1/Program.cs">
+    <entry file="file://$PROJECT_DIR$/lab1/lab2.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+        <state relative-caret-position="60">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
           <folding>
-            <marker date="1613686367170" expanded="true" signature="6:66" ph="..." />
-            <marker date="1613686367170" expanded="true" signature="82:3992" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="111:3990" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="164:800" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="545:618" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="859:1119" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="927:1109" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="1269:1949" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="1554:1614" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="1967:3984" ph="HelpMethods" />
-            <marker date="1613686367170" expanded="true" signature="2048:2430" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="2147:2393" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="2297:2379" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="2492:2731" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="2797:3125" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="3208:3964" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="3472:3562" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="3603:3927" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="3662:3913" ph="{...}" />
-            <marker date="1613686367170" expanded="true" signature="3759:3854" ph="{...}" />
+            <marker date="1615025691489" expanded="true" signature="14:61" ph="{...}" />
+            <marker date="1615025691489" expanded="true" signature="38:59" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1/Lab1Alg.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1590">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+          <folding>
+            <marker date="1615026122172" expanded="true" signature="6:56" ph="..." />
+            <marker date="1615026122172" expanded="true" signature="72:3331" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="99:3329" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="258:885" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="519:582" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="905:3316" ph="HelpMethods" />
+            <marker date="1615026122172" expanded="true" signature="987:1381" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="1089:1342" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="1242:1327" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="1444:1690" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="1757:2095" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="2179:2960" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="2451:2544" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="2586:2921" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="2647:2906" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="2747:2845" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="3018:3286" ph="{...}" />
+            <marker date="1615026122172" expanded="true" signature="3088:3275" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1/lab1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <marker date="1615026589647" expanded="false" signature="6:66" ph="..." />
+            <marker date="1615026589647" expanded="true" signature="82:826" ph="{...}" />
+            <marker date="1615026589647" expanded="true" signature="108:824" ph="{...}" />
+            <marker date="1615026589647" expanded="true" signature="161:816" ph="{...}" />
+            <marker date="1615026589647" expanded="true" signature="574:647" ph="{...}" />
           </folding>
         </state>
       </provider>

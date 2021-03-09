@@ -1,0 +1,14 @@
+E:\Doks\moiu\lab2\lab2\obj\Debug\lab2.csprojAssemblyReference.cache
+E:\Doks\moiu\lab2\lab2\obj\Debug\lab2.csproj.CoreCompileInputs.cache
+E:\Doks\moiu\lab2\lab2\bin\Debug\Accord.dll.config
+E:\Doks\moiu\lab2\lab2\bin\Debug\lab2.exe
+E:\Doks\moiu\lab2\lab2\bin\Debug\lab2.pdb
+E:\Doks\moiu\lab2\lab2\bin\Debug\Accord.dll
+E:\Doks\moiu\lab2\lab2\bin\Debug\Accord.Math.Core.dll
+E:\Doks\moiu\lab2\lab2\bin\Debug\Accord.Math.dll
+E:\Doks\moiu\lab2\lab2\bin\Debug\Accord.xml
+E:\Doks\moiu\lab2\lab2\bin\Debug\Accord.Math.xml
+E:\Doks\moiu\lab2\lab2\bin\Debug\Accord.Math.Core.xml
+E:\Doks\moiu\lab2\lab2\obj\Debug\lab2.csproj.CopyComplete
+E:\Doks\moiu\lab2\lab2\obj\Debug\lab2.exe
+E:\Doks\moiu\lab2\lab2\obj\Debug\lab2.pdb
