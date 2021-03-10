@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using Accord.Math;
+using System.Numerics;
 
 namespace lab2
 {
@@ -37,7 +38,7 @@ namespace lab2
             var matrix = new double[row, col];
             for (var i = 0; i < row; i++)
             {
-                var numbers = Console.ReadLine()?.Split(' ').Select(int.Parse).ToArray();
+                var numbers = Enumerable.ToArray(Console.ReadLine()?.Split(' ').Select(int.Parse));
                 for (var j = 0; j < col; j++)
                 {
                     matrix[i, j] = numbers[j];
