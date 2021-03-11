@@ -14,7 +14,6 @@ namespace lab2
             int vectorNumber)
         {
             var l = MultiplyMatrix(B, x);
-            Console.WriteLine("l vector :");
             var l1 = l;
             var k = l1[vectorNumber, 0];
             l1[vectorNumber, 0] = -1;
@@ -23,9 +22,7 @@ namespace lab2
                 l1[i, 0] /= -k;
             }
 
-            Console.WriteLine("l1 vector : ");
             var D = GetIdentityMatrix(A.GetLength(0));
-            Console.WriteLine("D matrix:");
             for (var i = 0; i < A.GetLength(0); i++)
                 D[i, vectorNumber] = l1[i, 0];
             return MultiplyMatrix(D, B);
