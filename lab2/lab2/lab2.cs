@@ -14,13 +14,17 @@ namespace lab2
         private static double[,] inverse_matrix_B;
         private static double[,] matrix_N;
         private static double[,] zero_point;
+        private static double[,] changeVector;
+        private static int changeIndex;
+        private static double[,] matrix;
+        private static double[,] targetVector;
 
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter the dimension:");
             var dims = int.Parse(Console.ReadLine() ?? throw new Exception());
             Console.WriteLine("Enter the target function's coefs:");
-            var c = MoiuLib.FillMatrix(1, dims);
+            targetVector = MoiuLib.FillMatrix(1, dims);
             
             Console.WriteLine("Enter count of conditions:");
             var rows = int.Parse(Console.ReadLine() ?? throw new Exception());
@@ -29,60 +33,73 @@ namespace lab2
                 throw new Exception("count of conditions must be less or equal than dimension");
             
             Console.WriteLine("Fill the matrix:");
-            var matrix = MoiuLib.FillMatrix(rows, dims);
+            matrix = MoiuLib.FillMatrix(rows, dims);
 
             Console.WriteLine("Enter zero point:");
             zero_point = MoiuLib.FillMatrix(1, dims);
 
             basis_indexes = zero_point.GetRow(0).Select(((d, i) => new {d, i})).OrderByDescending((arg => arg.d)).Take(rows).Select((arg => arg.i)).ToList();
             non_basis_indexes = zero_point.GetRow(0).Select(((d, i) => i)).ToList().Except(basis_indexes).ToList();
-            
-            matrix_B = GetSubMatrixByCols(matrix, basis_indexes.ToArray());
-            matrix_N = GetSubMatrixByCols(matrix, non_basis_indexes.ToArray());
-            
-            Console.WriteLine("matrix_B");
-            MoiuLib.PrintMatrix(matrix_B);
 
-            double[,] changeVector = new double[1,1];
-            int changeIndex = 0;
-            inverse_matrix_B = inverse_matrix_B != null ? MoiuLib.Algorithm(matrix_B, inverse_matrix_B, changeVector, changeIndex ) : matrix_B.Inverse();
-            Console.WriteLine("inverse matrix_b");
-            MoiuLib.PrintMatrix(inverse_matrix_B);
-
-            double[,] Cn = c.GetRow(0).Where((d, i) => non_basis_indexes.Contains(i)).ToList().Make2DArray();
-            double[,] Cb = c.GetRow(0).Where((d, i) => basis_indexes.Contains(i)).ToList().Make2DArray();
-            var div = FindDiv(Cn, Cb, inverse_matrix_B, matrix_N);
-
-            Console.WriteLine("div");
-            MoiuLib.PrintMatrix(div);
-            var c_indexes_more_zero = div.GetRow(0).Select(((d, i) => new {d, i}))
-                .Where((arg => arg.d > 0))
-                .Select((arg => arg.i))
-                .ToList();
-            
-            if (c_indexes_more_zero.Count > 0)
+            for (int i = 1; ; i++)
             {
-                var c_index = c_indexes_more_zero[0];
-                var c_column = matrix.GetColumn(c_index);
-                var increment = inverse_matrix_B.Dot(c_column);
-                var tettas = new Dictionary<int, double>();
-                for (int i = 0; i < increment.Length; i++)
-                {
-                    if(increment[i] > 0)
-                        tettas[i] = zero_point[0, basis_indexes[i]] / increment[i];
-                }
-                var tetta_max = tettas.Min((pair => pair.Value));
-                
-                UpdateZeroPoint(increment, tetta_max, c_index);
+                Console.WriteLine($"№{i} ITERATION");
+                if (!BringZeroPoint())
+                    break;
 
-            }  
-            Console.WriteLine("Updated zero point vector");
-            MoiuLib.PrintMatrix(zero_point);
+
+            }
+            Console.WriteLine("zero point is satisfying the requirements");
             Console.ReadKey();
 
         }
 
-        private static void UpdateZeroPoint(double[] increment, double tettaMax, int index)
+        private static bool BringZeroPoint()
+        {
+             matrix_B = GetSubMatrixByCols(matrix, basis_indexes.ToArray());
+             matrix_N = GetSubMatrixByCols(matrix, non_basis_indexes.ToArray());
+             
+             Console.WriteLine("matrix_B");
+             MoiuLib.PrintMatrix(matrix_B);
+ 
+             inverse_matrix_B = inverse_matrix_B != null ? MoiuLib.Algorithm(matrix_B, inverse_matrix_B, changeVector, changeIndex ) : matrix_B.Inverse();
+             Console.WriteLine("inverse matrix_b");
+             MoiuLib.PrintMatrix(inverse_matrix_B);
+ 
+             double[,] Cn = targetVector.GetRow(0).Where((d, i) => non_basis_indexes.Contains(i)).ToList().Make2DArray();
+             double[,] Cb = targetVector.GetRow(0).Where((d, i) => basis_indexes.Contains(i)).ToList().Make2DArray();
+             var div = FindDiv(Cn, Cb, inverse_matrix_B, matrix_N);
+ 
+             Console.WriteLine("div");
+             MoiuLib.PrintMatrix(div);
+             var c_indexes_more_zero = div.GetRow(0).Select(((d, i) => new {d, i}))
+                 .Where((arg => arg.d > 0))
+                 .Select((arg => arg.i))
+                 .ToList();
+             
+             if (c_indexes_more_zero.Count > 0)
+             {
+                 var c_index = c_indexes_more_zero[0];
+                 var c_column = matrix.GetColumn(c_index);
+                 var increment = inverse_matrix_B.Dot(c_column);
+                 var tettas = new Dictionary<int, double>();
+                 for (int i = 0; i < increment.Length; i++)
+                 {
+                     if(increment[i] > 0)
+                         tettas[i] = zero_point[0, basis_indexes[i]] / increment[i];
+                 }
+                 var tetta_max = tettas.Min((pair => pair.Value));
+                 
+                 UpdateData(increment, tetta_max, c_index);
+                 Console.WriteLine("Updated zero point vector");
+                 MoiuLib.PrintMatrix(zero_point);
+                 return true;
+             }
+
+             return false;
+
+        }
+        private static void UpdateData(double[] increment, double tettaMax, int index)
         {
             var result = new double[basis_indexes.Count];
             for (int i = 0; i < basis_indexes.Count; i++)
@@ -101,6 +118,9 @@ namespace lab2
 
             non_basis_indexes[non_basis_indexes.IndexOf(index)] = basis_indexes[min_ind];
             basis_indexes[min_ind] = index;
+
+            changeIndex = min_ind;
+            changeVector = MoiuLib.TranposeMatrix(matrix.GetCol(index).Make2DArray());
 
         }
 
